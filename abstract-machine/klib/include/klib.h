@@ -12,16 +12,20 @@ extern "C" {
 //#define __NATIVE_USE_KLIB__
 
 // string.h
-void  *memset    (void *s, int c, size_t n);
-void  *memcpy    (void *dst, const void *src, size_t n);
-void  *memmove   (void *dst, const void *src, size_t n);
-int    memcmp    (const void *s1, const void *s2, size_t n);
-size_t strlen    (const char *s);
-char  *strcat    (char *dst, const char *src);
-char  *strcpy    (char *dst, const char *src);
-char  *strncpy   (char *dst, const char *src, size_t n);
-int    strcmp    (const char *s1, const char *s2);
-int    strncmp   (const char *s1, const char *s2, size_t n);
+void  *memset    (void *s, int c, size_t count);
+void  *memcpy    (void *dest, const void *src, size_t count);
+void  *memmove   (void *dest, const void *src, size_t count);
+int    memcmp    (const void *s1, const void *s2, size_t count);
+void  *memchr    (const void *s, int c, size_t count);
+size_t strlen    (const char *str);
+size_t strnlen   (const char *str, size_t count);
+char  *strcat    (char* dest, const char* src);
+char  *strcpy    (char *dest, const char *src);
+char  *strncpy   (char *dest, const char *src, size_t count);
+int    strcmp    (const char *a, const char *b);
+int    strncmp   (const char *a, const char *b, size_t count);
+char  *strchr    (const char *s, int c);
+char  *strrchr   (const char *s, int c);
 
 // stdlib.h
 void   srand     (unsigned int seed);
